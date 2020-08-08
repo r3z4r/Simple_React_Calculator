@@ -2,14 +2,46 @@
     margin: 5px;
     border-radius: 50%;
     border-width: 0;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
+    background-color: aliceblue;
+    box-shadow:  inset 2px 2px 5px white;
+    outline: none;
 }
-
+.Number:hover{
+    background-color: white;
+    border: solid 1px rgb(238, 231, 130);
+}
+.Number:active{
+    background-color: white;
+    transform: scale(1.1,1.1);
+}
 .Operator{
-    display: block;
-    
+    margin: 5px;
+    border-radius: 50%;
+    border-width: 0;
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(136, 158, 224);
+    box-shadow:   2px 2px 5px white;
+    outline: none;
+}
+.Operator:nth-child(1){
+    background-color: lightcoral;
+}
+.Operator:nth-child(2n){
+    background-color: yellowgreen;
+}
+.Operator:hover{
+    background-color: white;
+    border: solid 1px rgb(238, 231, 130);
+}
+.Operator:active{
+    background-color: white;
+    transform: scale(1.1,1.1);
 }

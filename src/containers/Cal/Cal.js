@@ -80,14 +80,16 @@ class Calculator extends Component {
             <div className = {classes.Calculator}>
                 <form >
                     <div style={{display:"inline"}}>
-                        <input className={classes.Arg1} type="text" value ={this.state.arg1} disabled/>
-                        <input className={classes.Op} type="text" value ={this.state.operation} disabled/>
+                        <input className={`${classes.Input} ${classes.Arg1}`} type="text" value ={this.state.arg1} disabled/>
+                        <input className={`${classes.Input} ${classes.Op}`} type="text" value ={this.state.operation} disabled/>
                     </div>
-                    <input ref={input=>{this.refMain = input}} autoFocus className={classes.Input} type="text" value ={this.state.activeArg} onChange ={this.inputHandler}/>
+                    <input ref={input=>{this.refMain = input}} autoFocus 
+                    className={`${classes.Input} ${classes.ActiveArg}`} type="text" value ={this.state.activeArg} onChange ={this.inputHandler}/>
                     <hr/>
-                    <Keys onClick = {(event)=>this.keyPressHandler(event)}/>
+                    <Keys 
+                        onClick = {(event)=>this.keyPressHandler(event)}
+                        onReset = {()=>this.setState({arg1:0,activeArg:0,operation:''})}/>
                 </form>
-                <button onClick={()=>this.setState({arg1:0,activeArg:0,operation:''})}>C</button>
             </div>
         )
     }
