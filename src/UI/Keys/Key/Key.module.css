@@ -1,0 +1,15 @@
+.Number{
+    margin: 5px;
+    border-radius: 50%;
+    border-width: 0;
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.Operator{
+    display: block;
+    
+}
