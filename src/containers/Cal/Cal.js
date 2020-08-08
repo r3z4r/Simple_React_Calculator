@@ -43,6 +43,10 @@ class Calculator extends Component {
     }
     calculate = ()=>{
         let result
+        // if(this.state.arg1 === 0){
+        //     console.log('initiate')
+        //     this.setState(pervState=>({arg1:pervState.activeArg , activeArg:0}))
+        // }
         switch(this.state.operation) {
             case '/':
                 result  = this.state.arg1 / this.state.activeArg
@@ -59,8 +63,8 @@ class Calculator extends Component {
             case '%':
                 result = this.state.arg1 % this.state.activeArg
                 break
-            default:
-                result = this.state.arg1
+            default:    // in case of '='
+                result = this.state.activeArg
                 break
         }
         this.setState({
@@ -71,10 +75,15 @@ class Calculator extends Component {
 
     keyPressHandler = (event)=>{
         const val = event.target.value
-        if(true){
+        if((/\+|-|\/|\*|=/).test(val)){
+            this.setState({operation : val})
+            this.calculate()
+        }else{
             this.setState(pervState=>({activeArg:pervState.activeArg*10+parseInt(val)}))
         }
     }
+
+
     render(){
         return(
             <div className = {classes.Calculator}>

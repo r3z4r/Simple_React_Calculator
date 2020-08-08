@@ -7,15 +7,16 @@
     height: 400px;
 }
 .Numbers{
-    margin-top: 30px;
+    margin-top: 16px;
     width: 300px;
     left:0;
     height: 400px;
 }
 .Opertions{
+    margin-top: 16px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     width: 50px;
     right: 0;
     height: 400px;

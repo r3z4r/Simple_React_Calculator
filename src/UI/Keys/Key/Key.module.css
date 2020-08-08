@@ -1,9 +1,9 @@
 .Number{
     margin: 5px;
     border-radius: 50%;
-    border-width: 0;
-    width: 70px;
-    height: 70px;
+    border: solid 0.5px white;
+    width: 75px;
+    height: 75px;
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
@@ -23,19 +23,26 @@
     margin: 5px;
     border-radius: 50%;
     border-width: 0;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     font-size: 20px;
     cursor: pointer;
     background-color: rgb(136, 158, 224);
     box-shadow:   2px 2px 5px white;
     outline: none;
 }
-.Operator:nth-child(1){
-    background-color: lightcoral;
-}
 .Operator:nth-child(2n){
     background-color: yellowgreen;
+}
+.Operator:nth-child(10){
+    background-color: lightcoral;
+    width: 75px;
+    height: 75px;
+}
+.Operator:nth-child(5){
+    background-color: rgb(255, 238, 0);
+    width: 80px;
+    height: 80px;
 }
 .Operator:hover{
     background-color: white;

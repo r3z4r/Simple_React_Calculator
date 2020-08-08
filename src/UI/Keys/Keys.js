@@ -11,14 +11,14 @@ export default function Keys(props) {
         <div className={classes.Keyboard}>
             <div className={classes.Numbers}>
                 {keys}
+                <Key isNumber={false}
+                        onPress={props.onReset}
+                        val = 'C'/>
                 <Key isNumber
                         onPress={props.onClick}
                         val = '0'/>
             </div>
             <div className={classes.Opertions}>
-                <Key isNumber={false}
-                        onPress={props.onReset}
-                        val = 'C'/>
                 <Key isNumber={false}
                         onPress={props.onClick}
                         val = '+'/>
@@ -30,7 +30,10 @@ export default function Keys(props) {
                         val = '/'/>
                 <Key isNumber={false}
                         onPress={props.onClick}
-                        val = 'x'/>
+                        val = '*'/>
+                <Key isNumber={false}
+                        onPress={props.onClick}
+                        val = '='/>
             </div>
         </div>
     )
